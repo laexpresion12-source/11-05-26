@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Expresión R.D - Artículo</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --azul-oscuro: #031138;
+            --azul-claro: #00ccff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f5f0e6;
+        }
+
+        .papel-arrugado {
+            background:
+                linear-gradient(135deg, #f8f4eb 0%, #e8dcc8 100%),
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.05), transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.04), transparent 50%);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-secundario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fdfdfc;
+            padding: 20px 30px;     /* Aumentado para mejor equilibrio */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-secundario::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(0, 0, 0, 0.05), transparent 40%),
+                radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.05), transparent 50%);
+            pointer-events: none;
+        }
+
+        .header-secundario * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LOGO - Aumentado 40% */
+        .logo-periodico {
+            height: 84px;           /* ← Logo agrandado (antes 60px) */
+            width: auto;
+            transition: height 0.3s;
+        }
+
+        .seccion {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1rem;
+            color: var(--azul-oscuro);
+            font-weight: 700;
+        }
+
+        nav {
+            background: #0E1116;
+            padding: 12px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            line-height: 1.1;
+            color: #031138;
+            margin-bottom: 15px;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .imagen-principal {
+            width: 100%;
+            height: 420px;
+            background: url(e234f8990c77d4c28d8ef72f13f35721.jpg) center/cover;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .imagen-secundaria {
+            width: 100%;
+            height: 320px;
+            background: url(ece2c6a33a5f6a8901546f30597e1599.jpg) center/cover;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 18px;
+        }
+
+        footer {
+            background: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body class="papel-arrugado">
+
+    <!-- HEADER -->
+    <header class="header-secundario">
+        <!-- ==================== CAMBIA EL LOGO AQUÍ ==================== -->
+        <img src="menu-desplegable/logo-periodico.png" class="logo-periodico" alt="La Expresión R.D">
+        <!-- ============================================================ -->
+
+        <div class="seccion">
+            Arte y Cultura
+        </div>
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nacional</a></li>
+            <li><a href="#">Internacional</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Arte Visual</a></li>
+            <li><a href="#">Opinión</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main>
+        <article>
+
+            <h1>Joven artista dominicana expone en Nueva York y conquista la crítica internacional</h1>
+            
+            <p class="meta">unilaury m.f | 11 de mayo de 2026</p>
+
+            <!-- ==================== IMAGEN PRINCIPAL ==================== -->
+            <div class="imagen-principal"></div>
+            <!-- ============================================================ -->
+
+            <p><strong>La obra de Jhoselyn Ramírez ya está siendo reconocida en el panorama artístico mundial.</strong> Su serie <strong>“Raíces de Fuego”</strong> combina técnicas tradicionales dominicanas con expresiones contemporáneas, creando un lenguaje visual poderoso y profundamente emocional.</p>
+
+            <p>La exposición, inaugurada el pasado 28 de abril en la prestigiosa galería <strong>“Caribbean Voices”</strong> de Manhattan, ha recibido excelentes críticas de importantes medios internacionales como <em>The New York Times</em> y <em>Artforum</em>.</p>
+
+            <!-- ==================== IMAGEN SECUNDARIA ==================== -->
+            <div class="imagen-secundaria"></div>
+            <!-- ============================================================ -->
+
+            <p>Críticos han destacado la capacidad de Ramírez para fusionar el folclore dominicano, los colores vibrantes del Caribe y las preocupaciones contemporáneas sobre identidad y migración. Varias obras de la serie ya han sido adquiridas por coleccionistas privados y se rumora interés de importantes museos.</p>
+
+            <p>Con tan solo 29 años, Jhoselyn Ramírez se posiciona como una de las voces más prometedoras del arte caribeño actual, demostrando que el talento dominicano sigue brillando con fuerza en los escenarios internacionales.</p>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>La Expresión R.D © 2026 • Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
