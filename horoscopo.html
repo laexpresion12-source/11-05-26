@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Expresión R.D - Portada</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --azul-oscuro: #031138;
+            --azul-claro: #00ccff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f5f0e6;
+        }
+
+        /* Fondo papel mejorado */
+        .papel-arrugado {
+            background:
+                linear-gradient(135deg, #f8f4eb 0%, #e8dcc8 100%),
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.05), transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.04), transparent 50%);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
+        }
+
+        /* HEADER */
+        header {
+            background: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+        }
+
+        .header-papel {
+            position: relative;
+
+            text-align: center;
+            overflow: hidden;
+
+            /* Base blanca tipo papel */
+            background: #fdfdfc;
+        }
+
+        /* CAPA 1: sombras suaves (profundidad) */
+        .header-papel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(120deg, rgba(0, 0, 0, 0.05) 0%, transparent 40%),
+                linear-gradient(300deg, rgba(0, 0, 0, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.06), transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.05), transparent 50%);
+
+            mix-blend-mode: multiply;
+            pointer-events: none;
+        }
+
+        /* CAPA 2: arrugas más marcadas */
+        .header-papel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                repeating-linear-gradient(45deg,
+                    rgba(0, 0, 0, 0.015) 0px,
+                    rgba(0, 0, 0, 0.015) 2px,
+                    transparent 2px,
+                    transparent 6px),
+                repeating-linear-gradient(-45deg,
+                    rgba(0, 0, 0, 0.01) 0px,
+                    rgba(0, 0, 0, 0.01) 2px,
+                    transparent 2px,
+                    transparent 8px);
+
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* CONTENIDO POR ENCIMA */
+        .header-papel * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LOGO */
+
+        .tagline {
+            color: #00ccff;
+            font-style: italic;
+        }
+
+        .logo {
+            max-height: 260px;
+            width: 30vh;
+            margin: 5px;
+        }
+
+        .tagline {
+            color: var(--azul-claro);
+        }
+
+        /* NAV */
+        nav {
+            background: #0E1116;
+            padding: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* GRID */
+        .contenido {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* ARTICLE */
+        article {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            
+        }
+
+        /* ASIDE */
+        aside {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .p1{
+            font-size: 25px;
+            color: #173eac;
+        }
+
+        .p2{
+            font-size: 19px;
+        }
+
+        .p3{
+            font-size: 25px;
+            color: #173eac;
+        }
+
+        h1{
+            font-size: 40px;
+            color: #031138;
+        }
+
+        .horos{
+            width: 400px;
+
+        }
+
+        h3{
+            font-size: 20px;
+            color: #173eac;
+        }
+        h2{
+            color: #173eac;
+        }
+
+       
+
+       
+
+    </style>
+</head>
+
+<body class="papel-arrugado">
+
+    <header class="header-papel">
+        <!-- AQUI VA EL LOGO -->
+        <img src="logo-periodico.png" class="logo" alt="Logo de La Expresión R.D">
+    </header>
+
+    <nav>
+        <!-- AQUI VA EL MENU -->
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="signos.html">Signos Zodiacales</a></li>
+           
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contenido">
+
+            <!-- COLUMNA PRINCIPAL -->
+            <div>
+
+                <!-- AQUI VA EL ARTICULO PRINCIPAL -->
+                <article>
+                    <h1>Horoscopo Del Dia</h1>
+                    <div class="horos2">
+                    <p class="p1"><strong>¿Quieres saber más sobre tus acciones o sentimientos? 
+                        <p class="p2">Eso puede tratarse de como le vaya a tu signo zodiacal en este año o mes! 
+                            Los signos zodiacales influyen principalmente en la forma en que las personas se ven a sí mismas y entienden sus relaciones. Muchas personas creen que su signo refleja su personalidad o compatibilidad con otros, aunque científicamente no hay pruebas de que los astros determinen el comportamiento humano.
+                        </p>
+                        <p class="p3"><strong>¿Qué como funciona eso?</strong></p> <p class="p2">Pues 
+                        los astros influyen en tu signo 
+                        para equilibrar decisiones,
+                         emociones y oportunidades,
+                          con énfasis en amor, trabajo
+                           y bienestar personal.
+                            Aqui puedes 
+                        que ver ocurre acorde a tu signo zodiacaly quizas responda
+                    muchas dudas de tu dia a dia.</p>
+                    </strong></p></div>
+                    
+                </article>
+
+                <article>
+                    <h2>¿Sabias esto de las Astrología?</h2>
+                    <p>En la Astrología,
+                         los signos zodiacales son 12
+                          divisiones del zodiaco que representan
+                           distintas características de personalidad y 
+                           formas de actuar. Cada persona tiene un 
+                           signo según su fecha de nacimiento, y se 
+                           cree que este influye en su carácter
+                           , emociones y relaciones. Aunque es muy 
+                           popular culturalmente, no tiene respaldo científico.</p>
+                </article>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside>
+                <img class="horos" src="image.png" alt="">
+                <h3>¿Cuál es tu signo?</h3>
+                <p><strong>Aries:</strong> Tu energía impulsa cambios rápidos
+                     en lo personal y profesional; actúa con intención 
+                     y celebra cada pequeño logro. Cuida tu franqueza en
+                      el amor y prioriza proyectos realistas en el trabajo.</p>
+
+                <p><strong>Tauro:</strong> Mantén equilibrio entre deseo y deber;
+                     aprovecha intuiciones para reorganizar tiempos
+                      y finanzas, y reserva momentos para descansar
+                       y recargar energía. </p>
+<p><strong>Géminis:</strong> Confía en tus ideas y comunica con claridad;
+     combina proyectos con cuidado del cuerpo y la mente, 
+     avanzando con paciencia creativa.</p>
+<p><strong>Cáncer:</strong> La intuición guía tus decisiones; protege tu espacio emocional y revisa lo hecho al final del día para mantener claridad.</p>
+<p><strong>Leo:</strong>  Lidera con intención y cuidado; equilibra ambición y descanso, y abre tu corazón con delicadeza en relaciones.</p>
+
+
+
+
+
+
+
+
+            </aside>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- AQUI VA EL PIE DE PAGINA -->
+        <p>La Expresión R.D © 2026</p>
+    </footer>
+
+</body>
+
+</html>
