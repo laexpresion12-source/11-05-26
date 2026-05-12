@@ -11,6 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+      :root {
+            --azul-oscuro: #031138;
+            --azul-claro: #00ccff;
+        }
     body::before{
       content:'';
       position:fixed;
@@ -46,12 +51,8 @@
 
     }
 
-    .logo img{
-      width:220px;
-      object-fit:contain;
-      display:block;
-    }
-    menu ul{
+  
+    .menu ul{
   display:flex;
   gap:25px;
   list-style:none;
@@ -60,10 +61,11 @@
 }
 
     .menu a{
-      color:white;
-      text-decoration:none;
-      font-weight:500;
-      transition:0.3s;
+           color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+
     }
 
     .menu a:hover{
@@ -181,6 +183,7 @@
   width:220px;
   max-width:100%;
   height:auto;
+  object-fit:contain;
   display:block;
 }
   </style>
