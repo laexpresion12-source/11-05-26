@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Expresión R.D - Artículo</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --azul-oscuro: #031138;
+            --azul-claro: #00ccff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f5f0e6;
+        }
+
+        /* FONDO GENERAL */
+        .papel-arrugado {
+            background:
+                linear-gradient(135deg, #f8f4eb 0%, #e8dcc8 100%),
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.05), transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.04), transparent 50%);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
+        }
+
+        /* HEADER DIFERENTE */
+        .header-secundario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fdfdfc;
+            padding: 15px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* EFECTO PAPEL */
+        .header-secundario::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(0, 0, 0, 0.05), transparent 40%),
+                radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.05), transparent 50%);
+            pointer-events: none;
+        }
+
+        .header-secundario * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LOGO IZQUIERDA */
+        .logo {
+            height: 70px;
+        }
+
+        /* SECCIÓN DERECHA */
+        .seccion {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--azul-oscuro);
+        }
+
+        /* NAV */
+        nav {
+            background: #0E1116;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+        }
+
+        /* MAIN ARTICULO */
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        article {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .meta {
+            color: gray;
+            font-size: 0.9rem;
+        }
+
+        .imagen {
+            width: 100%;
+            height: 350px;
+            background: url(Jason_and_Lucia_02_With_Logos_landscape_1_1746602802524.webp) center/cover;
+            background-size:100% 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body class="papel-arrugado">
+
+    <!-- HEADER DIFERENTE -->
+    <header class="header-secundario">
+
+        <!-- LOGO -->
+        <img src="logo-periodico.png" class="logo" alt="Logo">
+
+        <!-- NOMBRE DE SECCIÓN -->
+        <div class="seccion">
+            Video Juegos
+            <!-- AQUI LOS ESTUDIANTES CAMBIAN EL NOMBRE -->
+        </div>
+
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nacional</a></li>
+            <li><a href="#">Internacional</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Opinión</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main>
+
+
+        <article>
+
+            <!-- AQUI VA EL TITULO -->
+            <h1>Grand Theft Auto</h1>
+
+            <!-- AQUI VA LA INFO -->
+            <p class="meta">Andris W. Rodriguez | 11 de mayo de 2026</p>
+
+            <!-- AQUI VA LA IMAGEN -->
+            <div class="imagen"></div>
+
+            <!-- AQUI VA EL CONTENIDO -->
+            <p>Grand Theft Auto VI es un próximo videojuego de acción y aventura de mundo abierto desarrollado y publicado por Rockstar Games. Será el sexto juego principal de Grand Theft Auto, tras Grand Theft Auto V, y la decimosexta entrega en total.</p>
+            <p>La historia de Grand Theft Auto VI sigue a la pareja criminal Lucia Caminos y Jason Duval, quienes se ven atrapados en el lado más oscuro del lugar más soleado de América, en medio de una conspiración criminal que se extiende por todo el estado de Leonida.</p>
+            <p>La fecha de salida de Grand Theft Auto VI está programada para el 19 de noviembre de 2026 para PlayStation 5 y Xbox Series X/S. Sin embargo, también se ha mencionado que el lanzamiento podría ser el 26 de mayo de 2026 en algunos contextos.</p>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>La Expresión R.D © 2026</p>
+    </footer>
+
+</body>
+
+</html>
