@@ -15,7 +15,6 @@
       content:'';
       position:fixed;
       inset:0;
-      background:url(image\ copy.png);
       background-size:cover;
       background-position:center;
       opacity:0.18;
@@ -29,12 +28,12 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      background:#f4f4f4;
+      background: #f5f0e6;
       color:#111;
     }
 
     .topbar{
-      background:#031b4e;
+      background:url ('header.png');
       color:white;
       padding:18px 40px;
       display:flex;
@@ -168,6 +167,9 @@
         font-size:30px;
       }
     }
+    .pisado {
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -178,11 +180,17 @@
     </div>
 
     <nav class="menu">
-      <a href="#">Inicio</a>
-      <a href="#">Nacional</a>
-      <a href="#">Farandula</a>
-      <a href="#">Deportes</a>
-      <a href="#">Opinión</a>
+      <ul>
+           <li><a href="index.html">Inicio</a></li>
+            <li><a href="internacional.html">Internacional</a></li>
+             <li><a href="economia.html">Economía</a></li>
+             <li><a href="arteyc.html">Arte y Cultura</a></li>
+             <li><a href="deportes.html">Deportes</a></li>
+             <li><a href="tecnologia.html">Tecnología</a></li>
+             <li><a href="juegos.html">Juegos</a></li>
+             <li><a href="horoscopo.html">Horóscopo</a></li>
+            <li><a href="chisme.html"  class="pisado">Opinión</a></li>
+        </ul>
     </nav>
   </header>
 
