@@ -110,14 +110,13 @@
             font-size: 0.9rem;
         }
 
-        .imagen {
-            width: 100%;
-            height: 350px;
-            background: url(Jason_and_Lucia_02_With_Logos_landscape_1_1746602802524.webp) center/cover;
-            background-size:100% 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+        .imagen{
+    width:100%;
+    height:350px;
+    background:url('Jason_and_Lucia_02_With_Logos_landscape_1_1746602802524.webp') center/cover;
+    border-radius:10px;
+    margin:20px 0;
+}
 
         footer {
             background: var(--azul-oscuro);
@@ -128,6 +127,60 @@
         .pisado {
             color: white;
         }
+        @media (max-width:768px){
+
+    /* header */
+    .header-secundario{
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+        padding:15px;
+    }
+
+    .logo{
+        height:55px;
+        width:auto;
+    }
+
+    .seccion{
+        font-size:1.5rem;
+    }
+
+    /* menú */
+    nav{
+        padding:12px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:.9rem;
+    }
+
+    /* contenido */
+    main{
+        padding:10px;
+    }
+
+    article{
+        padding:15px;
+        margin:0;
+    }
+
+    h1{
+        font-size:1.8rem;
+        line-height:1.2;
+    }
+
+    /* imagen */
+    .imagen{
+        height:200px;
+    }
+}
     </style>
 </head>
 
@@ -160,7 +213,7 @@
              <li><a href="horoscopo.html">Horóscopo</a></li>
             <li><a href="chisme.html">Opinión</a></li>
         </ul>
-        </ul>
+    
     </nav>
 
     <!-- CONTENIDO -->
