@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Expresión R.D - Internacional</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --azul-oscuro: #031138;
+            --azul-claro: #00ccff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f5f0e6;
+        }
+
+        /* FONDO GENERAL */
+        .papel-arrugado {
+            background:
+                linear-gradient(135deg, #f8f4eb 0%, #e8dcc8 100%),
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.05), transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.04), transparent 50%);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
+        }
+
+        /* HEADER */
+        .header-secundario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fdfdfc;
+            padding: 15px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-secundario::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(0, 0, 0, 0.05), transparent 40%),
+                radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.05), transparent 50%);
+            pointer-events: none;
+        }
+
+        .header-secundario * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .seccion {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--azul-oscuro);
+        }
+
+        /* NAV */
+        nav {
+            background: #0E1116;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 950px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        article {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: gray;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .imagen {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            margin: 20px 0;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            text-align: justify;
+            color: #222;
+        }
+
+        footer {
+            background: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            .header-secundario{
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav ul{
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .imagen{
+                height: 250px;
+            }
+
+            h1{
+                font-size: 1.7rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="papel-arrugado">
+
+    <!-- HEADER -->
+    <header class="header-secundario">
+
+        <img src="logo-periodico.png" class="logo" alt="Logo">
+
+        <div class="seccion">
+            Internacional
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="1.html">América</a></li>
+            <li><a href="2.html">Europa</a></li>
+            <li><a href="3.html">Asia</a></li>
+            <li><a href="4.htm">África</a></li>
+            <li><a href="5.htm">Oceanía</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main>
+
+        <!-- NOTICIA 1 -->
+     <!-- NOTICIA 1 -->
+<article>
+
+    <h1>China fortalece su economía con nuevas inversiones en tecnología e inteligencia artificial</h1>
+
+    <p class="meta">Anabelle Ramírez | 11 de mayo de 2026</p>
+
+    <div class="imagen" style="background: url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=1200&auto=format&fit=crop');"></div>
+
+    <p>
+        China anunció nuevas medidas para fortalecer su economía mediante inversiones en inteligencia artificial y tecnología avanzada.
+    </p>
+
+    <p>
+        El gobierno busca aumentar la innovación y competir con las principales potencias tecnológicas del mundo.
+    </p>
+
+    <p>
+        Expertos consideran que estas iniciativas impulsarán el crecimiento económico y la modernización industrial del país.
+    </p>
+
+</article>
+
+<!-- NOTICIA 2 -->
+<article>
+
+    <h1>Japón impulsa la modernización tecnológica y energética</h1>
+
+    <p class="meta">Anabelle Ramírez | 11 de mayo de 2026</p>
+
+    <div class="imagen" style="background: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1200&auto=format&fit=crop');"></div>
+
+    <p>
+        Japón aprobó un nuevo paquete económico destinado a fortalecer la tecnología y mejorar su infraestructura digital y energética.
+    </p>
+
+    <p>
+        Las autoridades japonesas buscan acelerar la innovación y apoyar el desarrollo sostenible del país.
+    </p>
+
+    <p>
+        El proyecto incluye inversiones en energía limpia, transporte moderno y sistemas digitales avanzados.
+    </p>
+
+</article>
+
+<!-- NOTICIA 3 -->
+<article>
+
+    <h1>Corea del Sur y Estados Unidos realizan ejercicios militares conjuntos</h1>
+
+    <p class="meta">Anabelle Ramírez | 11 de mayo de 2026</p>
+
+    <div class="imagen" style="background: url('https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=1200&auto=format&fit=crop');"></div>
+
+    <p>
+        Corea del Sur y Estados Unidos llevaron a cabo ejercicios militares conjuntos ante las recientes pruebas de misiles realizadas por Corea del Norte.
+    </p>
+
+    <p>
+        Las maniobras buscan fortalecer la cooperación militar y aumentar la seguridad en la región asiática.
+    </p>
+
+    <p>
+        El gobierno surcoreano aseguró que continuará trabajando con sus aliados para mantener la estabilidad regional.
+    </p>
+
+</article>
+
+<!-- NOTICIA 4 -->
+<article>
+
+    <h1>India se consolida como una de las economías de mayor crecimiento</h1>
+
+    <p class="meta">Anabelle Ramírez | 11 de mayo de 2026</p>
+
+    <div class="imagen" style="background: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop');"></div>
+
+    <p>
+        India continúa destacándose como una de las economías con mayor crecimiento gracias al aumento de inversiones extranjeras.
+    </p>
+
+    <p>
+        El país ha fortalecido sectores como tecnología, comercio y desarrollo industrial.
+    </p>
+
+    <p>
+        Analistas consideran que India tendrá un papel clave en la economía mundial durante los próximos años.
+    </p>
+
+</article>
+
+<!-- NOTICIA 5 -->
+<article>
+
+    <h1>El conflicto en Medio Oriente preocupa a países asiáticos</h1>
+
+    <p class="meta">Anabelle Ramírez | 11 de mayo de 2026</p>
+
+    <div class="imagen" style="background: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop');"></div>
+
+    <p>
+        Países asiáticos expresaron preocupación por el impacto económico del conflicto en Medio Oriente.
+    </p>
+
+    <p>
+        El aumento en los precios del petróleo y las tensiones comerciales afectan a varias economías de Asia.
+    </p>
+
+    <p>
+        Gobiernos de la región mantienen reuniones para proteger la estabilidad económica y energética.
+    </p>
+
+</article>
+
+    </main>
+
+    <footer>
+        <p>La Expresión R.D © 2026</p>
+    </footer>
+
+</body>
+
+</html>
