@@ -48,22 +48,30 @@ header{
     border-bottom:5px solid var(--morado);
 }
 
+ .header-secundario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:url('header.png');
+            padding: 20px 30px;     /* Aumentado para mejor equilibrio */
+            position: relative;
+            overflow: hidden;
+        }
 
-.logo-area{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:18px;
-}
+        .header-secundario::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(0, 0, 0, 0.05), transparent 40%),
+                radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.05), transparent 50%);
+            pointer-events: none;
+        }
 
-
-.logo-area img{
-    width:150px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid ;
-}
+        .header-secundario * {
+            position: relative;
+            z-index: 2;
+        }
 
 
 .logo-texto h1{
@@ -309,22 +317,15 @@ nav ul{
 <body>
 
 
-<header>
+   <header class="header-secundario">
+        <!-- ==================== CAMBIA EL LOGO AQUÍ ==================== -->
+        <img src="logo-periodico.png" class="logo-periodico" alt="La Expresión R.D">
+        <!-- ============================================================ -->
 
-<div class="logo-area">
-
-    
-    <img src="logo-periodico.png" alt="Logo">
-
-    
-     <div class="seccion">
+        <div class="seccion">
             Deportes
         </div>
-
-</div>
-
-</header>
-
+    </header>
 
 <nav>
  <ul>
