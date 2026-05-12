@@ -36,18 +36,18 @@
             text-align: center;
         }
 
-        .header-papel {
+        .header-secundario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:url('header.png');
+            padding: 20px 30px;     /* Aumentado para mejor equilibrio */
             position: relative;
-
-            text-align: center;
             overflow: hidden;
-
-            /* Base blanca tipo papel */
-            background: #fdfdfc;
         }
 
         /* CAPA 1: sombras suaves (profundidad) */
-        .header-papel::before {
+        .header-secundario::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -63,7 +63,7 @@
         }
 
         /* CAPA 2: arrugas más marcadas */
-        .header-papel::after {
+        .header-secundario::after {
             content: "";
             position: absolute;
             inset: 0;
@@ -208,7 +208,7 @@
 
 <body class="papel-arrugado">
 
-    <header class="header-papel">
+    <header class="header-secundario">
         <!-- AQUI VA EL LOGO -->
         <img src="logo-periodico.png" class="logo" alt="Logo de La Expresión R.D">
     </header>
