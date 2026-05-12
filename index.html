@@ -102,9 +102,10 @@
         }
 
         .logo {
-            max-height: 260px;
-            width: 30vh;
-            margin: 5px;
+            width:260px;
+    max-width:100%;
+    height:auto;
+}
         }
 
         .tagline {
@@ -173,6 +174,64 @@
         .pisado {
             color: white;
         }
+        @media (max-width: 768px){
+
+    /* header */
+    .logo{
+        width:260px;
+       max-width:100%;
+       height:auto;
+}
+    }
+
+    /* menú */
+    nav{
+        padding:12px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        gap:15px;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:.9rem;
+    }
+
+    /* contenido principal */
+    .contenido{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    main{
+        padding:10px;
+    }
+
+    article,
+    aside{
+        margin:0;
+        padding:15px;
+    }
+
+    /* títulos */
+    h1{
+        font-size:1.8rem;
+    }
+
+    h2{
+        font-size:1.4rem;
+    }
+
+    /* imágenes */
+    img{
+        width:100%;
+        max-width:100%;
+        height:auto;
+    }
+
+}
     </style>
 </head>
 
