@@ -28,19 +28,16 @@
                 radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.04), transparent 50%);
             box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
         }
-
-        /* HEADER DIFERENTE */
-        .header-secundario {
+           .header-secundario {
             display: flex;
             justify-content: space-between;
             align-items: center;
-             background:url('header.png');
-            padding: 15px 30px;
+            background:url('header.png');
+            padding: 20px 30px;     /* Aumentado para mejor equilibrio */
             position: relative;
             overflow: hidden;
         }
 
-        /* EFECTO PAPEL */
         .header-secundario::before {
             content: "";
             position: absolute;
@@ -56,22 +53,24 @@
             z-index: 2;
         }
 
-        /* LOGO IZQUIERDA */
-        .logo {
-            height: 70px;
+        /* LOGO - Aumentado 40% */
+        .logo-periodico {
+            height: 84px;           /* ← Logo agrandado (antes 60px) */
+            width: auto;
+            transition: height 0.3s;
         }
 
         /* SECCIÓN DERECHA */
         .seccion {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.1rem;
             color: var(--azul-oscuro);
+            font-weight: 700;
         }
 
-        /* NAV */
         nav {
             background: #0E1116;
-            padding: 10px;
+            padding: 12px;
         }
 
         nav ul {
@@ -80,13 +79,17 @@
             gap: 30px;
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         nav a {
             color: var(--azul-claro);
             text-decoration: none;
+            font-weight: 500;
         }
-
+        nav a:hover {
+            color: white;
+        }
         /* MAIN ARTICULO */
         main {
             max-width: 900px;
@@ -197,7 +200,7 @@
     <header class="header-secundario">
 
         <!-- LOGO -->
-        <img src="logo-periodico.png" class="logo" alt="Logo">
+        <img src="logo-periodico.png" class="logo-periodico" alt="Logo">
 
         <!-- NOMBRE DE SECCIÓN -->
         <div class="seccion">
