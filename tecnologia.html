@@ -34,9 +34,7 @@
             box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
         }
 
-
-        /* HEADER */
-        .header-secundario {
+           .header-secundario {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,12 +43,14 @@
             position: relative;
             overflow: hidden;
         }
+
         .header-secundario::before {
             content: "";
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(120deg, rgba(0, 0, 0, 0.03), transparent 40%);
+                linear-gradient(120deg, rgba(0, 0, 0, 0.05), transparent 40%),
+                radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.05), transparent 50%);
             pointer-events: none;
         }
 
@@ -59,25 +59,27 @@
             z-index: 2;
         }
 
-        /* LOGO */
-        .logo {
-            width: 250px;
-            object-fit: contain;
+        /* LOGO - Aumentado 40% */
+        .logo-periodico {
+            height: 84px;           /* ← Logo agrandado (antes 60px) */
+            width: auto;
+            transition: height 0.3s;
         }
+     
 
         /* SECCION */
         .seccion {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             color: var(--azul-oscuro);
-            font-weight:bold;
+            font-weight:700;
         }
 
         /* NAV */
-        nav {
+        
+         nav {
             background: #0E1116;
-            padding: 15px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+            padding: 12px;
         }
 
         nav ul {
@@ -85,9 +87,9 @@
             justify-content: center;
             gap: 30px;
             list-style: none;
-            flex-wrap:wrap;
+            padding: 0;
+            margin: 0;
         }
-
         nav a {
             color: var(--azul-claro);
             text-decoration: none;
@@ -156,30 +158,115 @@
             margin-top:40px;
         }
 
-        @media(max-width:768px){
+       /* =========================
+   TABLET
+========================= */
+@media (max-width: 900px){
 
-            .header-secundario{
-                flex-direction:column;
-                gap:15px;
-                text-align:center;
-            }
+  main{
+    padding:30px 15px;
+  }
 
-            .logo{
-                width:180px;
-            }
+  article{
+    padding:25px;
+  }
 
-            .seccion{
-                font-size:1.8rem;
-            }
+  h1{
+    font-size:2rem;
+  }
 
-            h1{
-                font-size:2rem;
-            }
+  .imagen-articulo{
+    width:100%;
+    height:auto;
+    max-height:320px;
+    object-fit:cover;
+  }
 
-            article{
-                padding:25px;
-            }
-        }
+  nav ul{
+    flex-wrap:wrap;
+    gap:15px;
+    padding:0 10px;
+  }
+
+  .seccion{
+    font-size:1.8rem;
+  }
+
+  .logo-periodico{
+    height:65px;
+  }
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+@media (max-width: 600px){
+
+  .header-secundario{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+    padding:15px;
+  }
+
+  .logo-periodico{
+    height:55px;
+  }
+
+  .seccion{
+    font-size:1.4rem;
+  }
+
+  nav{
+    padding:10px 5px;
+  }
+
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
+
+  main{
+    padding:20px 12px;
+  }
+
+  article{
+    padding:18px;
+    border-radius:12px;
+  }
+
+  h1{
+    font-size:1.6rem;
+    line-height:1.3;
+  }
+
+  .meta{
+    font-size:0.85rem;
+  }
+
+  article p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  .imagen-articulo{
+    width:100%;
+    height:auto;
+    max-height:220px;
+    border-radius:12px;
+  }
+
+  footer{
+    font-size:14px;
+    padding:15px;
+  }
+}
     </style>
 </head>
 
@@ -189,7 +276,7 @@
     <header class="header-secundario">
 
         <!-- LOGO -->
-        <img src="logo-periodico.png" class="logo" alt="Logo La Expresión R.D">
+        <img src="logo-periodico.png" class="logo-periodico" alt="Logo La Expresión R.D">
 
         <!-- SECCIÓN -->
         <div class="seccion">
@@ -205,8 +292,8 @@
             <li><a href="internacional.html">Internacional</a></li>
             <li><a href="economia.html">Economía</a></li>
             <li><a href="arteyc.html">Arte y Cultura</a></li>
-            <li><a href="#" class="pisado">Tecnología</a></li>
             <li><a href="deportes.html">Deportes</a></li>
+             <li><a href="#" class="pisado">Tecnología</a></li>
             <li><a href="juegos.html">Juegos</a></li>
             <li><a href="horospoco.html">Horóscopo</a></li>
             <li><a href="chisme.html">Opinión</a></li>
